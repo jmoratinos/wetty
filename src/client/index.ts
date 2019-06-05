@@ -83,8 +83,7 @@ socket.on('connect', () => {
   }
 
   term.on('data', data => {
-    if (data != "Dead")
-      socket.emit('input', data);
+    if (data != 'Dead') socket.emit('input', data);
   });
   term.on('resize', size => {
     socket.emit('resize', size);
